@@ -171,7 +171,7 @@ class FrameExtractorThread(QThread):
                         log_info = f"mov_global={movimiento} umbral={umbral_mov_global}"
 
             if guardar:
-                # Ajuste para exportar en tamaño YOLOv8 si se elige "640x640 (YOLOv8)"
+                # Ajuste para exportar en tamaño YOLOv8 si se elige "x640 (YOLOv8)"
                 if self.resize_option != "Original":
                     if "640x360" in self.resize_option:
                         frame = cv2.resize(frame, (640, 360), interpolation=cv2.INTER_AREA)
@@ -223,7 +223,7 @@ class FrameExtractorThread(QThread):
 class FrameExtractor(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Extractor de Imágenes (Auditoría de Video)")
+        self.setWindowTitle("Dev. Luis De La Torre P. - Extractor de Imágenes (Auditoría de Video)")
         self.video_path = ""
         self.output_dir = ""
 
@@ -286,7 +286,8 @@ class FrameExtractor(QWidget):
         self.debug_checkbox.setChecked(False)
 
         self.skip_save_checkbox = QCheckBox("Salto de 60s tras captura")
-        self.skip_save_checkbox.setChecked(ENABLE_SKIP_AFTER_SAVE)
+        #self.skip_save_checkbox.setChecked(ENABLE_SKIP_AFTER_SAVE)
+        self.skip_save_checkbox.setChecked(False)
 
         self.skip_seconds_input = QDoubleSpinBox()
         self.skip_seconds_input.setMinimum(0)
