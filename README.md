@@ -1,4 +1,4 @@
-# Video Frame Extractor AI
+# Detección de Movimiento en Videos largos con Inteligencia Artificial
 
 Herramienta en Python para analizar videos y extraer automáticamente imágenes relevantes utilizando detección de movimiento y modelos de inteligencia artificial.
 
