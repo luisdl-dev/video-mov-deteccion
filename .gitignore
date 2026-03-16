@@ -26,4 +26,4 @@ log_visual_gui.txt
 show_frame_debug.txt
 src/FOTOS/
 src/REGISTROS_DE_EDICION/
-VIDEOEDIT_v2.log
+*.log
